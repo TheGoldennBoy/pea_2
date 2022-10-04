@@ -8,7 +8,7 @@ function configurar(){
 
 }
 
-
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 function iniciar(){
 
     obtenerClientes();
