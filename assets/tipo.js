@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function(){
-    buscar();
+    Consulta();
 })
 
-function buscar() {
+function Consulta() {
     const btnConsulta = document.querySelector('#btnConsulta');
     btnConsulta.addEventListener('click', obtenerClientes);
 }
