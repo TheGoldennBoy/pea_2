@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 function buscar() {
-    const btnbuscar = document.querySelector('#btnConsulta');
-    btnbuscar.addEventListener('click', obtenerClientes);
+    const btnConsulta = document.querySelector('#btnConsulta');
+    btnConsulta.addEventListener('click', obtenerClientes);
 }
 async function obtenerClientes(){
     const url = "data/cliente.php?accion=listar";
