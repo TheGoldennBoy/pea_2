@@ -1,9 +1,9 @@
 <?php
 require_once('database.php');
 
-if($_SERVER['REQUEST_METHOD']=== 'POST'){
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-}else{
+} else{
     $accion = $_GET['accion'];
     if($accion === 'listar'){
         $sql = "SELECT A.id, razon_social, B.nombre AS tipo_cliente, 
@@ -14,12 +14,12 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
         $clientes = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         if(count($clientes) > 0){
             $respuesta = [
-                "codigo"=> 200,
+                "codigo" => 200,
                 "data" => $clientes
             ];
-        }else{
-            $respuesta  = [
-                "codigo"=> 404,
+        } else {
+            $respuesta = [
+                "codigo" => 404,
                 "mensaje" => "No hay data disponible"
             ];
         }

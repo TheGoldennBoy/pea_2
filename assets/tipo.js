@@ -1,24 +1,16 @@
 document.addEventListener('DOMContentLoaded', function(){
-    iniciar();
+    buscar();
 })
 
-function configurar(){
-    const btnConsulta = document.querySelector('#btnConsulta');
-    btnConsulta.addEventListener('click', iniciar);
-
+function buscar() {
+    const btnbuscar = document.querySelector('#btnConsulta');
+    btnbuscar.addEventListener('click', obtenerClientes);
 }
-
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-function iniciar(){
-
-    obtenerClientes();
-}
-
 async function obtenerClientes(){
-     const url = "data/cliente.php?accion=listar";
-     const respuesta = await fetch(url);
-     const resultado = await respuesta.json();
-     if(resultado.codigo === 200){
+    const url = "data/cliente.php?accion=listar";
+    const respuesta = await fetch(url);
+    const resultado = await respuesta.json();
+    if(resultado.codigo === 200){
         const data = resultado.data;
         let html = "";
         data.forEach(cliente => {
@@ -31,7 +23,6 @@ async function obtenerClientes(){
             html += "</tr>";
         });
         const tabla = document.querySelector("#tblData");
-        tabla.innerHTML = html   
-        //console.log(tabla);
-     }
+        tabla.innerHTML = html
+    }
 }
