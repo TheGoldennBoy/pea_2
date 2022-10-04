@@ -30,8 +30,8 @@ async function obtenerClientes(){
             html += "<td>" + cliente.direccion + "</td>";
             html += "</tr>";
         });
-        //const tabla = document.querySelector("#tblData");
-        //tabla.innerHTML = html   
+        const tabla = document.querySelector("#tblData");
+        tabla.innerHTML = html   
         //console.log(tabla);
      }
 }
