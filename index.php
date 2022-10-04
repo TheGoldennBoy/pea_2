@@ -16,11 +16,11 @@
     <table class="table table-hover text-nowrap">
             <thead>
                 <tr>
-                    <th>id</th>
-                    <th>razon social</th>
-                    <th>tipo doc</th>
+                    <th>Id</th>
+                    <th>Razon social</th>
+                    <th>Tipo doc</th>
                     <th>N.Documento</th>
-                    <th>direccion</th>
+                    <th>Direccion</th>
                 </tr>
             </thead> 
             <tbody id="tblData">
